@@ -1,0 +1,1 @@
+kubectl explain node.spec
