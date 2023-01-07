@@ -1,0 +1,1 @@
+kubectl cp /tmp/index.html kiada:html/
