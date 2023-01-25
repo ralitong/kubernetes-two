@@ -6,5 +6,6 @@ spec:
   containers:
   - name: kiada
     image: luksa/kiada:0.1
+    imagePullPolicy: Always
     ports:
-      - containerPort: 8080
+    - containerPort: 8080

@@ -1,0 +1,7 @@
+livenessProbe:
+  exec:
+    command:
+      - /usr/bin/healthceck
+    periodSeconds: 2
+    timeoutSeconds: 2
+    failureThreshold: 1

@@ -1,0 +1,5 @@
+livenessProbe:
+  tcpSocket:
+    port: 1234
+  periodSeconds: 2
+  failureThreshold: 1
