@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: quiz-data-inmemory
+spec:
+  volumes:
+    - name: quiz-data-inmemory
+      emptyDir:
+        medium: Memory
+  containers:
+    - name: quiz-api
+      image: luksa/quiz-api:0.1
+      ports:
+        - name: http
+          containerPort: 8080
+    - name: mongo
+      image: mongo:4.4.6
+      volumeMounts:
+        - name: quiz-data-inmemory
+          mountPath: /data/db
